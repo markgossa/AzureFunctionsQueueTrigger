@@ -11,8 +11,6 @@ namespace QueueTrigger
         public static void Run([QueueTrigger(queueName:"queue1", Connection = "AZURE_QUEUE_CONNECTION_STRING")]string inputObject, ILogger log)
         {
             log.LogInformation($"C# Queue trigger function processed: {inputObject}");
-
-            Console.WriteLine(inputObject);
         }
     }
 }
